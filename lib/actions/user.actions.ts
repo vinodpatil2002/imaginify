@@ -36,7 +36,7 @@ export async function readUser(userId: string){
 export async function updateUser(userId: string, user: UpdateUserParams){
     try{
         await connectToDatabase();
-        const updatedUser = await User.findOneAndUpdate({clerk Id: userId}, user, {new: true});
+        const updatedUser = await User.findOneAndUpdate({clerkId: userId}, user, {new: true});
         if (!updatedUser){
             throw new Error("User not found");
         }
