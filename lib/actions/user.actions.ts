@@ -1,7 +1,6 @@
 "use server"
 
-import { json } from "stream/consumers";
-import { User } from "../database/models/user.model";
+import User from "../database/models/user.model";
 import { connectToDatabase } from "../database/mongoose";
 import { handleError } from "../utils";
 import { revalidatePath } from "next/cache";
